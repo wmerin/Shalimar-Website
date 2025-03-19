@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>E-Monitor</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Include your font-awesome or other libraries if needed -->
+</head>
+<body>
+  <!-- Optionally include a header for navigation or branding -->
+  <header class="header">
+    <a href="index.html" class="logo">
+      <img src="images/logo 3.jpg" alt="Shalimar Builders Logo" class="logo-img">
+      Shalimar<span>Builders</span>
+    </a>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <section class="content">
+      <h1>Welcome to E-Monitor</h1>
+      <p>This is a space for some content related to the E-Monitor page. You can add more details, images, or data here as needed.</p>
+      <!-- Login Button -->
+      <button class="btn" onclick="openLoginPopup()">Login</button>
+    </section>
+  </main>
+
+  <!-- Login Form Overlay (Initially Hidden) -->
+  <div class="overlay" id="overlay"></div>
+  <div id="loginPopup" class="login-form">
+    <h3>Login Form</h3>
+    <input type="email" placeholder="Enter your email" class="box" />
+    <input type="password" placeholder="Enter your password" class="box" />
+    <div class="flex">
+      <input type="checkbox" id="remember-me" />
+      <label for="remember-me">Remember me</label>
+      <a href="#">Forgot password?</a>
+    </div>
+    <input type="submit" value="Login Now" class="btn" />
+    <p>Don't have an account? <a href="#">Create one!</a></p>
+    <br>
+    <button onclick="closePopup()">Close</button>
+  </div>
+
+  <!-- Link to the external JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
