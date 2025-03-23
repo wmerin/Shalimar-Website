@@ -1,49 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>E-Monitor</title>
-  <link rel="stylesheet" href="style.css">
-  <!-- Include your font-awesome or other libraries if needed -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Monitor | Shalimar Builders</title>
+    <link rel="stylesheet" href="css/styles1.css">
 </head>
 <body>
-  <!-- Optionally include a header for navigation or branding -->
-  <header class="header">
-    <a href="index.html" class="logo">
-      <img src="images/logo 3.jpg" alt="Shalimar Builders Logo" class="logo-img">
-      Shalimar<span>Builders</span>
-    </a>
-  </header>
 
-  <!-- Main Content Section -->
-  <main>
-    <section class="content">
-      <h1>Welcome to E-Monitor</h1>
-      <p>This is a space for some content related to the E-Monitor page. You can add more details, images, or data here as needed.</p>
-      <!-- Login Button -->
-      <button class="btn" onclick="openLoginPopup()">Login</button>
-    </section>
-  </main>
+   <!-- Header Section Starts -->
+<header class="header">
+  <div class="header-content">
 
-  <!-- Login Form Overlay (Initially Hidden) -->
-  <div class="overlay" id="overlay"></div>
-  <div id="loginPopup" class="login-form">
-    <h3>Login Form</h3>
-    <input type="email" placeholder="Enter your email" class="box" />
-    <input type="password" placeholder="Enter your password" class="box" />
-    <div class="flex">
-      <input type="checkbox" id="remember-me" />
-      <label for="remember-me">Remember me</label>
-      <a href="#">Forgot password?</a>
+    <!-- Navbar Container (Logo + Links) -->
+    <nav class="navbar">
+
+      <!-- Logo -->
+      <a href="#" class="logo">
+        <img src="images/logo 3.jpg" alt="Shalimar Builders Logo" class="logo-img">
+        Shalimar<span>Builders</span>
+      </a>
+
+      <!-- Navigation Links -->
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#projects">Gallery</a>
+        <a id="projectTrackingBtn" href="E-monitor.html">E-Monitor</a>
+        <a href="Cost-estimate.html">Cost Estimate</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+
+    </nav>
+
+  </div>
+</header>
+
+    <!-- Icons (Menu and Search) -->
+    <div class="icons">
+      <div id="menu-btn" class="fas fa-bars"></div>
+      <div id="search-btn" class="fas fa-search"></div>
     </div>
-    <input type="submit" value="Login Now" class="btn" />
-    <p>Don't have an account? <a href="#">Create one!</a></p>
-    <br>
-    <button onclick="closePopup()">Close</button>
   </div>
 
-  <!-- Link to the external JavaScript file -->
-  <script src="script.js"></script>
+    
+
+   <!-- Login Popup Modal -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Client Login</h2>
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email">
+      <label for="password">Password:</label>
+      <input type="password" id="password" placeholder="Enter your password">
+      <button id="loginBtn">Login</button>
+  </div>
+</div>
+
+
+    <!-- E-Monitor Page Content -->
+    <section id="projectDetails" class="hidden">
+        <h1 id="clientName"></h1>
+        <h2>Project ID: <span id="projectId"></span></h2>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <p>Project Completion:</p>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <p id="progressText">0% Complete</p>
+        </div>
+
+        <!-- Completed Work Gallery -->
+        <div class="gallery">
+            <h2>Completed Work</h2>
+            <div id="galleryImages"></div>
+        </div>
+    </section>
+
+    <script src="script2.js"></script>
 </body>
 </html>
